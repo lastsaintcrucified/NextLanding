@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const pricingTiers = [
 	{
-		title: "Usua",
-		monthlyPrice: 15,
+		title: "Usual",
+		monthlyPrice: 10,
 		buttonText: "Get started immediately",
 		popular: false,
 		inverse: false,
@@ -21,7 +21,7 @@ const pricingTiers = [
 	},
 	{
 		title: "Pro",
-		monthlyPrice: 10,
+		monthlyPrice: 15,
 		buttonText: "Hire me now",
 		popular: true,
 		inverse: true,
