@@ -1,9 +1,9 @@
 "use client";
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
+import avatar1 from "@/assets/abc.png";
+import avatar2 from "@/assets/def.png";
 import avatar3 from "@/assets/avatar-3.png";
-import avatar4 from "@/assets/avatar-4.png";
-import avatar5 from "@/assets/avatar-5.png";
+import avatar4 from "@/assets/ghi.jpg";
+import avatar5 from "@/assets/def.png";
 import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
@@ -14,58 +14,66 @@ import React from "react";
 
 const testimonials = [
 	{
-		text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+		text: " Fix-It is a full-stack web application built to streamline the connection between clients and local service providers, offering a robust, secure, and real-time experience across devices",
 		imageSrc: avatar1.src,
-		name: "Jamie Rivera",
-		username: "@jamietechguru00",
+		name: "Fix-ut",
+		username: "NextJs,Shadcn,Firebase",
+		link: "https://fix-it-three.vercel.app/",
 	},
 	{
-		text: "Our team's productivity has skyrocketed since we started using this tool. ",
+		text: " This is actually a simple project management apps where you can sign up as an admin( For testing ,although it is recommended to have this feature unprotected for public) and also as an user.  ",
 		imageSrc: avatar2.src,
-		name: "Josh Smith",
-		username: "@jjsmith",
+		name: "Project Dashboard",
+		username: "NextJs,Shadcn,Firebase",
+		link: "https://project-dashboard-django.vercel.app/",
 	},
 	{
-		text: "This app has completely transformed how I manage my projects and deadlines.",
+		text: " DailyPrompt provides completely new and random topic every day based on ai.",
 		imageSrc: avatar3.src,
-		name: "Morgan Lee",
-		username: "@morganleewhiz",
+		username: "NextJs,Shadcn,Firebase",
+		name: "Daily Prompt",
+		link: "https://daily-prompt.vercel.app/",
 	},
 	{
-		text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+		text: " Clone of a Scholarship platform .",
 		imageSrc: avatar4.src,
-		name: "Casey Jordan",
-		username: "@caseyj",
+		username: "NextJs,Shadcn,Firebase",
+		name: "AlterYouth",
+		link: "https://alter-youth-phi.vercel.app/",
 	},
 	{
-		text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
-		imageSrc: avatar5.src,
-		name: "Taylor Kim",
-		username: "@taylorkimm",
-	},
-	{
-		text: "The customizability and integration capabilities of this app are top-notch.",
+		text: " A chatting apps created to communicate between friends. Used socket.io for real-time chat",
+		username: "ReactJs,SocketIo,Firebase",
 		imageSrc: avatar6.src,
-		name: "Riley Smith",
-		username: "@rileysmith1",
+		name: "Bro Chat",
+		link: "https://react-fb-chat.firebaseapp.com/",
+	},
+
+	{
+		text: " DailyPrompt provides completely new and random topic every day based on ai.",
+		imageSrc: avatar3.src,
+		name: "Daily Prompt",
+		link: "https://daily-prompt.vercel.app/",
 	},
 	{
-		text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
-		imageSrc: avatar7.src,
-		name: "Jordan Patels",
-		username: "@jpatelsdesign",
+		text: " This is actually a simple project management apps where you can sign up as an admin( For testing ,although it is recommended to have this feature unprotected for public) and also as an user.  ",
+		imageSrc: avatar2.src,
+		name: "Project Dashboard",
+		link: "https://project-dashboard-django.vercel.app/",
 	},
 	{
-		text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
-		imageSrc: avatar8.src,
-		name: "Sam Dawson",
-		username: "@dawsontechtips",
+		text: " Clone of a Scholarship platform .",
+		imageSrc: avatar4.src,
+		name: "AlterYouth",
+		link: "https://alter-youth-phi.vercel.app/",
 	},
 	{
-		text: "Its user-friendly interface and robust features support our diverse needs.",
-		imageSrc: avatar9.src,
-		name: "Casey Harper",
-		username: "@casey09",
+		text: " A chatting apps created to communicate between friends. Used socket.io for real-time chat",
+		username: "ReactJs,SocketIo,Firebase",
+		imageSrc: avatar6.src,
+		name: "Bro Chat",
+
+		link: "https://react-fb-chat.firebaseapp.com/",
 	},
 ];
 
@@ -96,29 +104,37 @@ const TestimonialColumn = (props: {
 		>
 			{[...new Array(2)].fill(0).map((_, index) => (
 				<React.Fragment key={index}>
-					{props.testimonials.map(({ text, imageSrc, name, username }) => (
-						<div
-							key={text}
-							className='card'
-						>
-							<div>{text}</div>
-							<div className='flex mt-5 gap-2 items-center'>
-								<Image
-									src={imageSrc}
-									alt={name}
-									width={40}
-									height={40}
-									className='h-10 w-10 rounded-full'
-								/>
-								<div className='flex flex-col'>
-									<div className='font-medium leading-5 tracking-tight'>
-										{name}
+					{props.testimonials.map(
+						({ text, imageSrc, name, username, link }) => (
+							<div
+								key={text}
+								className='card'
+							>
+								<a
+									href={link}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<div>{text}</div>
+									<div className='flex mt-5 gap-2 items-center'>
+										<Image
+											src={imageSrc}
+											alt={name}
+											width={40}
+											height={40}
+											className='h-10 w-10 rounded-full'
+										/>
+										<div className='flex flex-col'>
+											<div className='font-medium leading-5 tracking-tight'>
+												{name}
+											</div>
+											<div className='tracking-tight leading-5'>{username}</div>
+										</div>
 									</div>
-									<div className='tracking-tight leading-5'>{username}</div>
-								</div>
+								</a>
 							</div>
-						</div>
-					))}
+						)
+					)}
 				</React.Fragment>
 			))}
 		</motion.div>
@@ -131,12 +147,12 @@ export const Testimonials = () => {
 			<div className='container'>
 				<div className='section-heading'>
 					<div className='flex justify-center'>
-						<div className='tag'>Testimonials</div>
+						<div className='tag'>Projects</div>
 					</div>
-					<h2 className='section-title mt-5'>What our users say</h2>
+					<h2 className='section-title mt-5'>Quality over Quantity</h2>
 					<p className='section-description mt-5'>
 						From intuitive design to powerful features, our app has become an
-						essential tool for users around the world.
+						essential tool for users.
 					</p>
 				</div>
 				<div className='flex justify-center gap-6  mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden'>

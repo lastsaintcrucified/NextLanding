@@ -5,52 +5,52 @@ import { motion } from "framer-motion";
 
 const pricingTiers = [
 	{
-		title: "Free",
-		monthlyPrice: 0,
-		buttonText: "Get started for free",
+		title: "Usua",
+		monthlyPrice: 15,
+		buttonText: "Get started immediately",
 		popular: false,
 		inverse: false,
 		features: [
-			"Up to 5 project members",
-			"Unlimited tasks and projects",
-			"2GB storage",
-			"Integrations",
-			"Basic support",
+			"Up to 2 revisions",
+			"Standard support",
+			"Pixel perfect code implementation",
+			"Responsive design",
+			"Basic analytics",
+			"Basic security features",
 		],
 	},
 	{
 		title: "Pro",
-		monthlyPrice: 9,
-		buttonText: "Sign up now",
+		monthlyPrice: 10,
+		buttonText: "Hire me now",
 		popular: true,
 		inverse: true,
 		features: [
-			"Up to 50 project members",
-			"Unlimited tasks and projects",
-			"50GB storage",
-			"Integrations",
-			"Priority support",
-			"Advanced support",
-			"Export support",
+			"Up to 5 revisions",
+			"Good support",
+			"Pixel perfect code implementation",
+			"Responsive design",
+			"Basic analytics",
+			"Basic security features",
+			"Light/Dark mode",
 		],
 	},
 	{
 		title: "Business",
-		monthlyPrice: 19,
-		buttonText: "Sign up now",
+		monthlyPrice: 25,
+		buttonText: "Contact me",
 		popular: false,
 		inverse: false,
 		features: [
-			"Up to 5 project members",
-			"Unlimited tasks and projects",
-			"200GB storage",
-			"Integrations",
-			"Dedicated account manager",
-			"Custom fields",
+			"Up to 10 revisions",
+			"Best support",
+			"Pixel perfect code implementation",
+			"Responsive design",
+			"Basic analytics",
+			"Basic security features",
+			"Light/Dark mode",
 			"Advanced analytics",
-			"Export capabilities",
-			"API access",
-			"Advanced security features",
+			"Custom features",
 		],
 	},
 ];
@@ -65,7 +65,7 @@ export const Pricing = () => {
 				<div className='section-heading'>
 					<h2 className='section-title'>Pricing</h2>
 					<p className='section-description mt-5'>
-						Free forever, update for unlimited tasks, better security and
+						Quality forever, update for unlimited tasks, better security and
 						exclusive features
 					</p>
 				</div>
@@ -123,7 +123,7 @@ export const Pricing = () => {
 										${monthlyPrice}
 									</span>
 									<span className='tracking-tight font-bold text-black/50'>
-										/month
+										/hour
 									</span>
 								</div>
 								<button
@@ -131,6 +131,9 @@ export const Pricing = () => {
 										"btn btn-primary w-full mt-[30px]",
 										inverse === true && "bg-white text-black"
 									)}
+									onClick={() =>
+										(window.location.href = "mailto:itowhidul876@gmail.com")
+									}
 								>
 									{buttonText}
 								</button>

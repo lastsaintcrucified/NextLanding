@@ -20,7 +20,9 @@ export const CallToAction = () => {
 		>
 			<div className='container'>
 				<div className='section-heading relative'>
-					<h2 className='section-title'>Sign up for free today</h2>
+					<h2 className='section-title'>
+						Hire me today for a seamless experience!
+					</h2>
 					<p className='section-description mt-5'>
 						Celebrate the joy of accomplishment with an app designed to track
 						your progress and motivate your efforts.
@@ -45,7 +47,14 @@ export const CallToAction = () => {
 					/>
 				</div>
 				<div className='flex justify-center gap-2 mt-10'>
-					<button className='btn btn-primary'>Contact Now</button>
+					<button
+						className='btn btn-primary'
+						onClick={() =>
+							(window.location.href = "mailto:itowhidul876@gmail.com")
+						}
+					>
+						Contact Now
+					</button>
 					<button className='btn bnt-text gap-1'>
 						<span>Learn more</span>
 						<ArrowRight className='h-5 w-5' />

@@ -7,7 +7,7 @@ import clsx from "clsx";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Md. Towhidul Islam Bhy",
+	title: "Md.Towhidul Islam Bhy",
 	description: "Towhid resume",
 };
 
